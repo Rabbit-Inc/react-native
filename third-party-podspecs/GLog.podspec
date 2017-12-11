@@ -9,6 +9,7 @@ Pod::Spec.new do |spec|
   spec.prepare_command = File.read("../scripts/ios-configure-glog.sh")
   spec.source = { :git => 'https://github.com/google/glog.git',
                   :tag => "v#{spec.version}" }
+  spec.header_dir = 'glog'
   spec.module_name = 'glog'
   spec.source_files = 'src/glog/*.h',
                       'src/demangle.cc',
